@@ -15,6 +15,15 @@ public class IncomeServiceTest {
     }
 
     @Test
+    public void ShouldGetPocketMoney() {
+        IncomeService service = new IncomeService();
+        int age = 16;
+        int actual = service.calcIncome(age);
+        int expected = 1000;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void ShouldGetSalary() {
         IncomeService service = new IncomeService();
         int age = 50;
